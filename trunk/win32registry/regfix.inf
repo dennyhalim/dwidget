@@ -1,0 +1,24 @@
+[Version]
+Signature="$Chicago$"
+Provider=DennyHalim.com
+
+[DefaultInstall]
+AddReg=regfix
+DelReg=enablereg
+
+[regfix]
+HKLM, Software\CLASSES\batfile\shell\open\command,,,"""%1"" %*"
+HKLM, Software\CLASSES\comfile\shell\open\command,,,"""%1"" %*"
+HKLM, Software\CLASSES\exefile\shell\open\command,,,"""%1"" %*"
+HKLM, Software\CLASSES\piffile\shell\open\command,,,"""%1"" %*"
+HKLM, Software\CLASSES\regfile\shell\open\command,,,"regedit.exe ""%1"""
+HKLM, Software\CLASSES\scrfile\shell\open\command,,,"""%1"" /S"
+HKLM, Software\CLASSES\scrfile\shell\config\command,,0,"%1"
+HKLM, SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon,"Shell",,""Explorer.exe""
+HKLM, SYSTEM\ControlSet001\Control\SafeBoot,"AlternateShell",,""cmd.exe""
+HKLM, SYSTEM\ControlSet002\Control\SafeBoot,"AlternateShell",,""cmd.exe""
+HKLM, SYSTEM\CurrentControlSet\Control\SafeBoot,"AlternateShell",,""cmd.exe""
+
+[enablereg]
+HKCU, "software\microsoft\windows\currentversion\policies\system","DisableRegistryTools"
+HKCU, "software\microsoft\windows\currentversion\policies\system","DisableTaskMgr"
