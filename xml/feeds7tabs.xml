@@ -55,7 +55,7 @@ display_name="Feed 7: URL"
 datatype="string"
 default_value="http://feeds.feedburner.com/harga"/>
 <UserPref name="feedTitle7" display_name="Feed 7: Title" datatype="string" default_value="harga"/>
-<UserPref name="entries" display_name="# of Entries" datatype="enum" default_value="3">
+<UserPref name="entries" display_name="# of Entries" datatype="enum" default_value="7">
 <EnumValue value="3"/>
 <EnumValue value="4"/>
 <EnumValue value="5"/>
@@ -142,10 +142,16 @@ var f1 = _trim(prefs.getString("feed1"));
 var f2 = _trim(prefs.getString("feed2"));
 var f3 = _trim(prefs.getString("feed3"));
 var f4 = _trim(prefs.getString("feed4"));
+var f5 = _trim(prefs.getString("feed5"));
+var f6 = _trim(prefs.getString("feed6"));
+var f7 = _trim(prefs.getString("feed7"));
 var ft1 = _trim(prefs.getString("feedTitle1"));
 var ft2 = _trim(prefs.getString("feedTitle2"));
 var ft3 = _trim(prefs.getString("feedTitle3"));
 var ft4 = _trim(prefs.getString("feedTitle4"));
+var ft5 = _trim(prefs.getString("feedTitle5"));
+var ft6 = _trim(prefs.getString("feedTitle6"));
+var ft7 = _trim(prefs.getString("feedTitle7"));
 
 if (f1 != "") {
 tabs.addDynamicTab(((ft1 == "") ? "Feed 1" : ft1), _IG_Callback(callbackTab, f1));
@@ -158,6 +164,15 @@ tabs.addDynamicTab(((ft3 == "") ? "Feed 3" : ft3), _IG_Callback(callbackTab, f3)
 }
 if (f4 != "") {
 tabs.addDynamicTab(((ft4 == "") ? "Feed 4" : ft4), _IG_Callback(callbackTab, f4));
+}
+if (f5 != "") {
+tabs.addDynamicTab(((ft5 == "") ? "Feed 5" : ft5), _IG_Callback(callbackTab, f5));
+}
+if (f6 != "") {
+tabs.addDynamicTab(((ft6 == "") ? "Feed 6" : ft6), _IG_Callback(callbackTab, f6));
+}
+if (f7 != "") {
+tabs.addDynamicTab(((ft7 == "") ? "Feed 7" : ft7), _IG_Callback(callbackTab, f7));
 }
 };
 
