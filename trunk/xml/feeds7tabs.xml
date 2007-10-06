@@ -20,7 +20,7 @@ singleton="false">
 </ModulePrefs>
 <UserPref name="title" display_name="Feeds in 7 Tabs" default_value="Feeds in Tabs"/>
 <UserPref name="tabFontSize" display_name="Tab Font Size" default_value="0.7em"/>
-<UserPref name="showFeedDesc" display_name="Feeds in 7 Tabs" datatype="bool" default_value="true"/>
+<UserPref name="showFeedDesc" display_name="Show Feeds in 7 Tabs" datatype="bool" default_value="true"/>
 <UserPref name="feed1"
 display_name="Feed 1: URL"
 datatype="string"
