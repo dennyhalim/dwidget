@@ -1,0 +1,20 @@
+ExpiresActive On
+Header append Cache-Control "public"
+
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+ExpiresActive Off
+#Header set Cache-Control "private"
+#ExpiresDefault A30
+</FilesMatch>
+
+# cache images and flash content
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
+Header unset Last-Modified
+ExpiresDefault A5184000
+</FilesMatch>
+
+# cache text, css, and javascript files
+<FilesMatch ".(js|css|pdf|txt)$">
+Header unset Last-Modified
+ExpiresDefault A5184000
+</FilesMatch>
