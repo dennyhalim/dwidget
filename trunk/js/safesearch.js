@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name           Google - SafeSearch
-// @description    Google - SafeSearch: is a greasemonkey script allowing Google to automatically search safe without saving cookies (by default).
+// @name           SafeSearch
+// @description    SafeSearch: is a greasemonkey script allowing Google, Bing and Yahoo! to automatically search safe without saving cookies (by default).
 // @include        *images.google.*/images?*
 // @include        *google.*/microsoft*&q=*
 // @include        *google.*/linux*&q=*
@@ -15,9 +15,9 @@
 // @exclude        *youtube.*/*&safe=on
 // @exclude        *search.yahoo.com/search;*&vm=r
 // @exclude        *bing.com/*&adlt=strict
-// @author      ScriptDeveloper | Function: JoeSimmons
-// @copyright   ScriptDeveloper
-// @version     1.4
+// @author      dennyhalim.com
+// @copyright   dennyhalim.com
+// @version     1.7
 // ==/UserScript==
 
 var f, safeon, homeTest;
