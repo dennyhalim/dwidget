@@ -20,7 +20,7 @@
 // @exclude        */*&adlt=strict
 // @author      dennyhalim.com
 // @copyright   dennyhalim.com
-// @version     1.7.2.2
+// @version     1.7.3
 // ==/UserScript==
 
 var f, safeon, homeTest,bing,yahoo;
@@ -30,6 +30,11 @@ bing = /(^http\:\/\/www\.bing\.com\/*)/i;
 yahoo = /(^http\:\/\/search\.yahoo\.com\/*)/i; 
 google = /(^http\:\/\/*\.google\.*)/i; 
 youtube = /(^http\:\/\/*\.youtube\.*)/i; 
+
+if (window.location.hostname.indexOf("bing") > -1) {location.replace(location.href+'&adlt=strict');}
+if (window.location.hostname.indexOf("yahoo") > -1) {location.replace(location.href+'&vm=r');}
+if (window.location.hostname.indexOf("google") > -1) {location.replace(location.href+'&safe=on');}
+if (window.location.hostname.indexOf("youtube") > -1) {location.replace(location.href+'&safe=on');}
 
 if(bing) {location.replace(location.href+'&adlt=strict');}
 if(yahoo) {location.replace(location.href+'&vm=r');}
