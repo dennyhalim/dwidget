@@ -9,8 +9,8 @@
 // @include        *video.google.*/videosearch?*
 // @include        *google.*/microsoft
 // @include        *search.yahoo.com/search;*
-// @include        *bing.com/search?*
-// @include        *bing.com/*/search?*
+// @include        *www.bing.com/search?*
+// @include        *www.bing.com/*/search?*
 // @exclude        *google.*/*&safe=on
 // @exclude        *youtube.*/*&safe=on
 // @exclude        *search.yahoo.com/search;*&vm=r
@@ -20,10 +20,14 @@
 // @version     1.7
 // ==/UserScript==
 
-var f, safeon, homeTest;
+var f, safeon, homeTest,bing,yahoo;
 
 homeTest = /(^http\:\/\/www\.google\.\w+\.?\w*\/webhp)|(^http\:\/\/www\.google\.\w+\.?\w*\/$)/i;
-if(!homeTest.test(location.href)) {location.replace(location.href+'&safe=on');}
+bing = /(^http\:\/\/www\.bing\.com)/i;
+yahoo = /(^http\:\/\/search\.yahoo\.com)/i; 
+if(bing) {location.replace(location.href+'&adlt=strict');}
+else if(yahoo) {location.replace(location.href+'&vm=r');}
+else if(!homeTest.test(location.href)) {location.replace(location.href+'&safe=on');}
 else {
 f = document.evaluate("//form[@name='f']",document,null,9,null).singleNodeValue;
 safeon = document.createElement('input');
