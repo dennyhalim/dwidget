@@ -20,7 +20,7 @@
 // @exclude        */*&adlt=strict
 // @author      dennyhalim.com
 // @copyright   dennyhalim.com
-// @version     1.7.1.2
+// @version     1.7.1.3
 // ==/UserScript==
 
 var f, safeon, homeTest,bing,yahoo;
@@ -28,8 +28,6 @@ var f, safeon, homeTest,bing,yahoo;
 homeTest = /(^http\:\/\/www\.google\.\w+\.?\w*\/webhp)|(^http\:\/\/www\.google\.\w+\.?\w*\/$)/i;
 bing = /(^http\:\/\/www\.bing\.com)/i;
 yahoo = /(^http\:\/\/search\.yahoo\.com)/i; 
-if(bing) {location.replace(location.href+'&adlt=strict');}
-if(yahoo) {location.replace(location.href+'&vm=r');}
 if(!homeTest.test(location.href)) {location.replace(location.href+'&safe=on');}
 else {
 f = document.evaluate("//form[@name='f']",document,null,9,null).singleNodeValue;
@@ -40,4 +38,8 @@ name='safe';
 value='on';
 }
 f.appendChild(safeon);
+
+if(bing) {location.replace(location.href+'&adlt=strict');}
+if(yahoo) {location.replace(location.href+'&vm=r');}
+
 }
