@@ -17,7 +17,7 @@
 // @exclude        *bing.com/*&adlt=strict
 // @author      dennyhalim.com
 // @copyright   dennyhalim.com
-// @version     1.7
+// @version     1.7.1
 // ==/UserScript==
 
 var f, safeon, homeTest,bing,yahoo;
