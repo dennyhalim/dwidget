@@ -20,16 +20,16 @@
 // @exclude        */*&adlt=strict
 // @author      dennyhalim.com
 // @copyright   dennyhalim.com
-// @version     1.7.2
+// @version     1.7.2.2
 // ==/UserScript==
 
 var f, safeon, homeTest,bing,yahoo;
 
 homeTest = /(^http\:\/\/www\.google\.\w+\.?\w*\/webhp)|(^http\:\/\/www\.google\.\w+\.?\w*\/$)/i;
-bing = /(^http\:\/\/www\.bing\.com)/i;
-yahoo = /(^http\:\/\/search\.yahoo\.com)/i; 
-google = /(^http\:\/\/*\.google)/i; 
-youtube = /(^http\:\/\/*\.youtube)/i; 
+bing = /(^http\:\/\/www\.bing\.com\/*)/i;
+yahoo = /(^http\:\/\/search\.yahoo\.com\/*)/i; 
+google = /(^http\:\/\/*\.google\.*)/i; 
+youtube = /(^http\:\/\/*\.youtube\.*)/i; 
 
 if(bing) {location.replace(location.href+'&adlt=strict');}
 if(yahoo) {location.replace(location.href+'&vm=r');}
